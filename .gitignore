@@ -1,0 +1,13 @@
+# secrets
+.env
+*.key
+.claude/remote/
+.claude/launcher-settings.json
+.claude/settings.local.json
+# generated
+*-raw.png
+shots*/site.html
+.claude/sounds/*.wav
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>FindIt AI — לוח מודעות</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#e8ecf4}
+a{color:#00288e}a:hover{color:#1e40af}
+.board{background-color:#e8ecf4;background-image:radial-gradient(#c4c5d5 1.2px,transparent 1.2px);background-size:22px 22px}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+</style>
+</helmet>
+<div class="board" dir="rtl" style="font-family: 'Rubik', system-ui, sans-serif; color: #191c1e; line-height: 1.6; min-width: 0">
+
+<!-- HEADER -->
+<header style="padding: 0 24px">
+<div style="max-width: 1200px; margin: 0 auto; min-height: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; box-sizing: border-box">
+<a href="#top" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #00288e; background: #ffffff; padding: 8px 16px 8px 12px; border-radius: 12px; box-shadow: 0 2px 0 #c4c5d5">
+<span style="width: 14px; height: 14px; border-radius: 9999px; background: #ba1a1a; box-shadow: inset -2px -2px 0 rgba(0,0,0,0.25)"></span>
+<span style="font-size: 21px; font-weight: 800">FindIt AI</span>
+</a>
+<nav aria-label="ניווט ראשי" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; font-weight: 600">
+<a href="#how" style="color: #444653; text-decoration: none">איך זה עובד</a>
+<a href="#features" style="color: #444653; text-decoration: none">יכולות</a>
+<a href="#privacy" style="color: #444653; text-decoration: none">פרטיות</a>
+<a href="#campus" style="color: #444653; text-decoration: none">למוסדות</a>
+<a href="#faq" style="color: #444653; text-decoration: none">שאלות</a>
+</nav>
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 12px; background: #00288e; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; box-shadow: 0 3px 0 #001453">תלו מודעה</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="padding: 40px 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px; padding-top: 24px">
+<span style="align-self: flex-start; transform: rotate(-2deg); background: #ffdcc3; color: #6e3900; padding: 6px 14px; font-size: 15px; font-weight: 700; box-shadow: 0 2px 0 rgba(0,0,0,0.08)">לוח האבידות של הקמפוס, בגרסה חכמה</span>
+<h1 style="margin: 0; font-size: 64px; line-height: 1.15; font-weight: 800; color: #00288e">מה שהיה פעם פתק על הלוח, <span style="background: #89f5e7; color: #00201d; padding: 0 10px; border-radius: 8px">עכשיו מוצא את הבעלים.</span></h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.7; color: #444653; max-width: 560px">כמו לוח המודעות במסדרון, רק שהוא קורא כל פתק, משווה לפי תמונה, מיקום וזמן, ומודיע לכם כשיש התאמה אפשרית. פרטי הקשר שלכם לא נתלים על שום לוח.</p>
+
+<!-- sample notes (illustrative, no personal details) -->
+<div aria-label="דוגמאות לפתקים על הלוח" style="display: flex; flex-wrap: wrap; gap: 18px; padding-top: 8px">
+<div style="width: 200px; transform: rotate(-3deg); background: #ffffff; padding: 18px 16px 16px; box-shadow: 0 6px 14px rgba(15,23,42,0.12); position: relative">
+<span style="position: absolute; top: -7px; right: 50%; width: 14px; height: 14px; border-radius: 9999px; background: #ba1a1a"></span>
+<span style="display: inline-block; padding: 2px 10px; border-radius: 9999px; background: #ffdad6; color: #93000a; font-size: 13px; font-weight: 700">אבד</span>
+<p style="margin: 8px 0 0; font-size: 16px; font-weight: 600">אוזניות שחורות מעל האוזן</p>
+<p style="margin: 2px 0 0; font-size: 13px; color: #444653">ספרייה מרכזית</p>
+</div>
+<div style="width: 200px; transform: rotate(2deg); background: #89f5e7; padding: 18px 16px 16px; box-shadow: 0 6px 14px rgba(15,23,42,0.12); position: relative">
+<span style="position: absolute; top: -7px; right: 50%; width: 14px; height: 14px; border-radius: 9999px; background: #00288e"></span>
+<span style="display: inline-block; padding: 2px 10px; border-radius: 9999px; background: #ffffff; color: #005049; font-size: 13px; font-weight: 700">נמצא</span>
+<p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #00201d">מפתחות עם מחזיק כחול</p>
+<p style="margin: 2px 0 0; font-size: 13px; color: #005049">ליד הקפיטריה</p>
+</div>
+<div style="width: 200px; transform: rotate(-1deg); background: #ffdcc3; padding: 18px 16px 16px; box-shadow: 0 6px 14px rgba(15,23,42,0.12); position: relative">
+<span style="position: absolute; top: -7px; right: 50%; width: 14px; height: 14px; border-radius: 9999px; background: #006a61"></span>
+<span style="display: inline-block; padding: 2px 10px; border-radius: 9999px; background: #ffffff; color: #6e3900; font-size: 13px; font-weight: 700">התאמה אפשרית</span>
+<p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #2f1500">שני פתקים, אותו חפץ?</p>
+<p style="margin: 2px 0 0; font-size: 13px; color: #6e3900">ממתין לאימות בעלות</p>
+</div>
+</div>
+</div>
+
+<!-- Report card as the big pinned note -->
+<div id="start" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
+<div style="width: 440px; max-width: 100%; transform: rotate(1deg); background: #ffffff; padding: 36px 32px 32px; box-sizing: border-box; box-shadow: 0 14px 30px rgba(15,23,42,0.16); position: relative; display: flex; flex-direction: column; gap: 18px">
+<span aria-hidden="true" style="position: absolute; top: -12px; right: calc(50% - 60px); width: 120px; height: 26px; background: rgba(137,245,231,0.75); transform: rotate(-3deg)"></span>
+
+<sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 14px; font-weight: 700; color: #006a61">פתק חדש · שלב 1 מתוך 2</span>
+<h2 style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 800; color: #00288e">מצאת או איבדת?</h2>
+<button type="button" onClick="{{ chooseLost }}" style="display: flex; align-items: center; gap: 14px; width: 100%; min-height: 76px; padding: 14px 18px; border-radius: 14px; border: 2px solid #00288e; background: #dde1ff; color: #001453; cursor: pointer; text-align: right; font-family: inherit; box-shadow: 0 3px 0 #00288e">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-size: 20px; font-weight: 800">איבדתי חפץ</span><span style="font-size: 14px; color: #173bab">נתלה פתק "אבד" ונחפש התאמות</span></span>
+</button>
+<button type="button" onClick="{{ chooseFound }}" style="display: flex; align-items: center; gap: 14px; width: 100%; min-height: 76px; padding: 14px 18px; border-radius: 14px; border: 2px solid #006a61; background: #89f5e7; color: #00201d; cursor: pointer; text-align: right; font-family: inherit; box-shadow: 0 3px 0 #006a61">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-size: 20px; font-weight: 800">מצאתי חפץ</span><span style="font-size: 14px; color: #005049">נתלה פתק "נמצא" ונעזור להחזיר</span></span>
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="padding: 3px 12px; border-radius: 9999px; font-size: 14px; font-weight: 700; background: {{ chipBg }}; color: {{ chipFg }}">{{ modeLabel }} · שלב 2 מתוך 2</span>
+<button type="button" onClick="{{ back }}" style="min-height: 44px; padding: 0 10px; border: none; background: transparent; color: #00288e; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">חזרה</button>
+</div>
+<h2 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800; color: #00288e">{{ step2Title }}</h2>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="d3" style="font-size: 16px; font-weight: 600">מה כתוב על הפתק?</label>
+<textarea id="d3" rows="4" value="{{ desc }}" onChange="{{ onDesc }}" placeholder="{{ descPlaceholder }}" style="width: 100%; box-sizing: border-box; border-radius: 10px; border: 2px solid #c4c5d5; padding: 12px 14px; font-family: inherit; font-size: 16px; line-height: 1.6; color: #191c1e; background: #ffffff; resize: vertical"></textarea>
+<span style="font-size: 13px; color: #444653">מה זה, צבע, מותג, איפה ומתי. סימני זיהוי סודיים לא תולים על הלוח.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 16px; font-weight: 600">תמונה מתארת <span style="font-weight: 400; color: #444653">(לא חובה)</span></span>
+<sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
+<label for="p3" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 76px; border-radius: 10px; border: 2px dashed #757684; background: #f7f9fb; cursor: pointer; padding: 12px; box-sizing: border-box; color: #00288e; font-weight: 600; font-size: 15px">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+הוסיפו תמונה לפתק
+</label>
+</sc-if>
+<input id="p3" type="file" accept="image/*" onChange="{{ onFile }}" style="position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden">
+<sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 12px; border-radius: 10px; background: #f7f9fb; padding: 10px">
+<img src="{{ photoUrl }}" alt="תמונת החפץ שנבחרה" style="width: 64px; height: 64px; object-fit: cover; flex-shrink: 0; transform: rotate(-3deg); border: 4px solid #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.15)">
+<span style="flex: 1 1 auto; min-width: 0; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ photoName }}</span>
+<button type="button" onClick="{{ removePhoto }}" style="min-height: 44px; padding: 0 10px; border: none; background: transparent; color: #ba1a1a; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">הסרה</button>
+</div>
+</sc-if>
+</div>
+<sc-if value="{{ showHint }}" hint-placeholder-val="{{ false }}">
+<span role="alert" style="font-size: 14px; color: #ba1a1a">כתבו כמה מילים על החפץ כדי לתלות את הפתק.</span>
+</sc-if>
+<button type="button" onClick="{{ submit }}" style="min-height: 54px; border: none; border-radius: 12px; background: {{ submitBg }}; color: #ffffff; font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer; box-shadow: 0 3px 0 rgba(0,0,0,0.25)">{{ submitLabel }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="align-self: flex-start; transform: rotate(-3deg); padding: 6px 14px; border: 3px solid #047857; color: #047857; font-size: 18px; font-weight: 800; border-radius: 8px">נתלה על הלוח</span>
+<h2 style="margin: 0; font-size: 28px; font-weight: 800; color: #00288e">הפתק שלכם בפנים.</h2>
+<p style="margin: 0; font-size: 16px; color: #444653">{{ doneText }}</p>
+<div style="display: flex; gap: 12px; align-items: center; background: {{ chipBg }}; padding: 12px; transform: rotate(-1deg)">
+<sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+<img src="{{ photoUrl }}" alt="תמונת החפץ" style="width: 52px; height: 52px; object-fit: cover; flex-shrink: 0; border: 3px solid #ffffff">
+</sc-if>
+<div style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-size: 13px; font-weight: 700; color: {{ chipFg }}">{{ modeLabel }}</span>
+<span style="font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ desc }}</span>
+</div>
+</div>
+<button type="button" onClick="{{ reset }}" style="align-self: flex-start; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 2px solid #00288e; background: #ffffff; color: #00288e; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer">פתק נוסף</button>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; align-self: flex-start; font-size: 40px; font-weight: 800; color: #00288e; background: #ffffff; padding: 4px 18px; transform: rotate(-1deg); box-shadow: 0 2px 0 #c4c5d5">איך זה עובד</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+<div style="background: #dde1ff; padding: 32px 28px; transform: rotate(-1.5deg); box-shadow: 0 8px 18px rgba(15,23,42,0.12); position: relative; display: flex; flex-direction: column; gap: 10px">
+<span style="position: absolute; top: -8px; right: 50%; width: 16px; height: 16px; border-radius: 9999px; background: #ba1a1a"></span>
+<span style="font-size: 44px; font-weight: 800; color: #00288e; line-height: 1">1</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; color: #001453">תולים פתק</h3>
+<p style="margin: 0; font-size: 16px; color: #173bab">כותבים או אומרים בקול מה קרה, וה-AI ממלא קטגוריה, צבע, מיקום ושעה.</p>
+</div>
+<div style="background: #89f5e7; padding: 32px 28px; transform: rotate(1deg); box-shadow: 0 8px 18px rgba(15,23,42,0.12); position: relative; display: flex; flex-direction: column; gap: 10px">
+<span style="position: absolute; top: -8px; right: 50%; width: 16px; height: 16px; border-radius: 9999px; background: #00288e"></span>
+<span style="font-size: 44px; font-weight: 800; color: #006a61; line-height: 1">2</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; color: #00201d">הלוח קורא ומשווה</h3>
+<p style="margin: 0; font-size: 16px; color: #005049">ה-AI משווה כל פתק לפתקי המציאה לפי תמונה, צבע, מיקום ומועד, ומציג התאמות אפשריות עם רמת ביטחון.</p>
+</div>
+<div style="background: #ffdcc3; padding: 32px 28px; transform: rotate(-0.5deg); box-shadow: 0 8px 18px rgba(15,23,42,0.12); position: relative; display: flex; flex-direction: column; gap: 10px">
+<span style="position: absolute; top: -8px; right: 50%; width: 16px; height: 16px; border-radius: 9999px; background: #006a61"></span>
+<span style="font-size: 44px; font-weight: 800; color: #6e3900; line-height: 1">3</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; color: #2f1500">מאמתים ואוספים</h3>
+<p style="margin: 0; font-size: 16px; color: #6e3900">סימן זיהוי סודי נבדק על ידי גורם מוסמך, והאיסוף נעשה בנקודת האבידות של הקמפוס.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+<h2 style="margin: 0; align-self: flex-start; font-size: 40px; font-weight: 800; color: #00288e; background: #ffffff; padding: 4px 18px; transform: rotate(1deg); box-shadow: 0 2px 0 #c4c5d5">מה הלוח הזה יודע לעשות</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #00288e"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">התאמות שמסבירות את עצמן</h3><p style="margin: 0; font-size: 15px; color: #444653">רואים למה הוצעה ההתאמה: קטגוריה, צבע, מיקום ומועד.</p></div>
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #006a61"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">פתק בקול או בטקסט</h3><p style="margin: 0; font-size: 15px; color: #444653">מספרים בשפה חופשית, והטופס מתמלא לבד.</p></div>
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #6e3900"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">תמונה על הפתק</h3><p style="margin: 0; font-size: 15px; color: #444653">צילום אחד עוזר למנוע להשוות מראה ופרטים.</p></div>
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #00288e"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">התראה כשמשהו מתאים</h3><p style="margin: 0; font-size: 15px; color: #444653">לא צריך לחזור ולבדוק את הלוח כל יום.</p></div>
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #006a61"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">כל הפתקים שלכם במקום אחד</h3><p style="margin: 0; font-size: 15px; color: #444653">אבד · התאמה אפשרית · באימות · הוחזר.</p></div>
+<div style="background: #ffffff; padding: 24px; border-radius: 4px; box-shadow: 0 4px 10px rgba(15,23,42,0.08); border-top: 6px solid #6e3900"><h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700">לוח לכל קמפוס</h3><p style="margin: 0; font-size: 15px; color: #444653">מבנים ונקודות איסוף לפי המוסד שלכם.</p></div>
+</div>
+</div>
+</section>
+
+<!-- PRIVACY: official notice -->
+<section id="privacy" style="padding: 0 24px 96px">
+<div style="max-width: 860px; margin: 0 auto; background: #ffffff; padding: 48px 44px; box-sizing: border-box; box-shadow: 0 14px 30px rgba(15,23,42,0.14); position: relative; display: flex; flex-direction: column; gap: 20px">
+<span style="position: absolute; top: -9px; right: 24px; width: 18px; height: 18px; border-radius: 9999px; background: #00288e"></span>
+<span style="position: absolute; top: -9px; left: 24px; width: 18px; height: 18px; border-radius: 9999px; background: #00288e"></span>
+<div style="display: flex; align-items: center; gap: 12px; border-bottom: 3px double #00288e; padding-bottom: 14px">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#00288e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+<span style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #00288e">הודעה לבאי הלוח</span>
+</div>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.25; font-weight: 800; color: #00288e">על הלוח הזה לא תולים פרטים אישיים.</h2>
+<ul style="margin: 0; padding: 0 22px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 18px; color: #191c1e">
+<li>פרטי קשר לא מוצגים לאף אחד, אף פעם.</li>
+<li>סימני זיהוי סודיים נשמרים מוצפנים ונחשפים רק למאמת המוסמך.</li>
+<li>המסירה נעשית בנקודת האבידות הרשמית של הקמפוס, עם תעודת סטודנט.</li>
+<li>ה-AI מציע התאמה אפשרית בלבד. ההחלטה הסופית אנושית.</li>
+</ul>
+<span style="align-self: flex-end; transform: rotate(-4deg); padding: 6px 16px; border: 3px solid #00288e; border-radius: 8px; color: #00288e; font-size: 16px; font-weight: 800">ביטחון הקמפוס</span>
+</div>
+</section>
+
+<!-- INSTITUTIONS -->
+<section id="campus" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; align-self: flex-start; font-size: 40px; font-weight: 800; color: #00288e; background: #ffffff; padding: 4px 18px; transform: rotate(-1deg); box-shadow: 0 2px 0 #c4c5d5">למוסדות</h2>
+<p style="margin: 0; font-size: 19px; color: #444653; max-width: 600px">מחליפים את הלוח במסדרון ואת מחסן האבידות הידני בתהליך אחד: סטודנטים תולים פתקים, צוות הביטחון מאמת ומוסר. לוח בקרה, התאמה למבנה הקמפוס, מדיניות שמירה והודעות מערכת.</p>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; background: #00288e; color: #ffffff; padding: 36px; box-sizing: border-box; transform: rotate(1.5deg); box-shadow: 0 12px 24px rgba(0,40,142,0.3); display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 24px; font-weight: 800">רוצים לוח כזה בקמפוס שלכם?</h3>
+<p style="margin: 0; font-size: 16px; color: #dde1ff">נשמח להראות הדגמה. [פרטי התמחור שלכם]</p>
+<a href="#cta" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 12px; background: #89f5e7; color: #00201d; text-decoration: none; font-weight: 700; font-size: 16px">תיאום הדגמה</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding: 0 24px 96px">
+<div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0 0 12px; align-self: flex-start; font-size: 40px; font-weight: 800; color: #00288e; background: #ffffff; padding: 4px 18px; transform: rotate(1deg); box-shadow: 0 2px 0 #c4c5d5">שאלות מהמסדרון</h2>
+<details style="background: #ffffff; padding: 18px 22px; box-shadow: 0 3px 8px rgba(15,23,42,0.08)"><summary style="font-size: 19px; font-weight: 700">כמה זה עולה?</summary><p style="margin: 10px 0 0; font-size: 16px; color: #444653">לסטודנטים ולסגל, חינם. למוסדות: [פרטי התמחור שלכם].</p></details>
+<details style="background: #ffffff; padding: 18px 22px; box-shadow: 0 3px 8px rgba(15,23,42,0.08)"><summary style="font-size: 19px; font-weight: 700">מה קורה כשיש התאמה אפשרית?</summary><p style="margin: 10px 0 0; font-size: 16px; color: #444653">רואים השוואה בין שני הפתקים, מוסרים סימן זיהוי סודי, ואחרי אימות מתאמים איסוף.</p></details>
+<details style="background: #ffffff; padding: 18px 22px; box-shadow: 0 3px 8px rgba(15,23,42,0.08)"><summary style="font-size: 19px; font-weight: 700">מישהו יראה את הטלפון שלי?</summary><p style="margin: 10px 0 0; font-size: 16px; color: #444653">לא. התקשורת עוברת דרך המערכת וצוות הקמפוס.</p></details>
+<details style="background: #ffffff; padding: 18px 22px; box-shadow: 0 3px 8px rgba(15,23,42,0.08)"><summary style="font-size: 19px; font-weight: 700">מצאתי משהו. מה עושים איתו?</summary><p style="margin: 10px 0 0; font-size: 16px; color: #444653">תולים פתק "מצאתי", מצלמים אם אפשר, ומפקידים את החפץ בעמדת הביטחון הקרובה.</p></details>
+<details style="background: #ffffff; padding: 18px 22px; box-shadow: 0 3px 8px rgba(15,23,42,0.08)"><summary style="font-size: 19px; font-weight: 700">באילו קמפוסים יש לוח?</summary><p style="margin: 10px 0 0; font-size: 16px; color: #444653">[רשימת המוסדות שלכם]</p></details>
+</div>
+</section>
+
+<!-- CTA + FOOTER -->
+<section id="cta" style="padding: 0 24px 40px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div style="align-self: center; width: 720px; max-width: 100%; background: #89f5e7; padding: 48px 40px; box-sizing: border-box; transform: rotate(-1deg); box-shadow: 0 14px 30px rgba(15,23,42,0.16); position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<span aria-hidden="true" style="position: absolute; top: -12px; right: calc(50% - 60px); width: 120px; height: 26px; background: rgba(255,255,255,0.7); transform: rotate(2deg)"></span>
+<h2 style="margin: 0; font-size: 42px; line-height: 1.2; font-weight: 800; color: #00201d">איבדתם משהו? תלו פתק.</h2>
+<p style="margin: 0; font-size: 18px; color: #005049">פחות מדקה, עם חשבון הסטודנט.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #00288e; color: #ffffff; text-decoration: none; font-size: 17px; font-weight: 700; box-shadow: 0 3px 0 #001453">תלו פתק עכשיו</a>
+<a href="#campus" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #ffffff; color: #00288e; text-decoration: none; font-size: 17px; font-weight: 700">למוסדות</a>
+</div>
+</div>
+<footer style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 2px dashed #c4c5d5; font-size: 14px; color: #444653">
+<span style="font-weight: 800; color: #00288e">FindIt AI</span>
+<span>יצירת קשר: [האימייל שלכם]</span>
+<span>© 2026 FindIt AI</span>
+</footer>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { mode: null, desc: '', photoUrl: null, photoName: '', done: false, tried: false };
+  }
+  componentWillUnmount() {
+    if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+  }
+  renderVals() {
+    const s = this.state;
+    const lost = s.mode === 'lost';
+    const hasText = s.desc.trim().length > 0;
+    return {
+      step1: !s.mode,
+      step2: !!s.mode && !s.done,
+      step3: !!s.mode && s.done,
+      modeLabel: lost ? 'אבד' : 'נמצא',
+      chipBg: lost ? '#dde1ff' : '#89f5e7',
+      chipFg: lost ? '#001453' : '#00201d',
+      step2Title: lost ? 'מה איבדתם?' : 'מה מצאתם?',
+      descPlaceholder: lost
+        ? 'למשל: אוזניות שחורות מעל האוזן. נשכחו בספרייה, קומה 2, אתמול בצהריים.'
+        : 'למשל: מפתחות עם מחזיק כחול, על ספסל ליד הקפיטריה הבוקר.',
+      submitLabel: lost ? 'תלו פתק וחפשו התאמות' : 'תלו פתק מציאה',
+      submitBg: hasText ? (lost ? '#00288e' : '#006a61') : '#757684',
+      doneText: lost
+        ? 'נשווה אותו לפתקי המציאה בקמפוס ונעדכן אתכם כשתהיה התאמה אפשרית.'
+        : 'תודה! הפקידו את החפץ בעמדת הביטחון הקרובה, ונעדכן כשהבעלים יאתר אותו.',
+      desc: s.desc,
+      showHint: s.tried && !hasText,
+      hasPhoto: !!s.photoUrl,
+      noPhoto: !s.photoUrl,
+      photoUrl: s.photoUrl || '',
+      photoName: s.photoName,
+      chooseLost: () => this.setState({ mode: 'lost', done: false }),
+      chooseFound: () => this.setState({ mode: 'found', done: false }),
+      back: () => this.setState({ mode: null, tried: false }),
+      onDesc: (e) => this.setState({ desc: e.target.value }),
+      onFile: (e) => {
+        const f = e.target.files && e.target.files[0];
+        if (!f) return;
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ photoUrl: URL.createObjectURL(f), photoName: f.name });
+        e.target.value = '';
+      },
+      removePhoto: () => {
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ photoUrl: null, photoName: '' });
+      },
+      submit: () => {
+        if (!this.state.desc.trim()) { this.setState({ tried: true }); return; }
+        this.setState({ done: true, tried: false });
+      },
+      reset: () => {
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ mode: null, desc: '', photoUrl: null, photoName: '', done: false, tried: false });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

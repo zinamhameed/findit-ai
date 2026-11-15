@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#191c1e", "surface-variant": "#e0e3e5", "on-primary": "#ffffff", "on-error-container": "#93000a", "secondary-container": "#86f2e4", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#ffdcc3", "on-error": "#ffffff", "on-primary-fixed-variant": "#173bab", "surface-container-high": "#e6e8ea", "inverse-primary": "#b8c4ff", "on-surface": "#191c1e", "on-secondary-fixed-variant": "#005049", "surface-container": "#eceef0", "secondary-fixed": "#89f5e7", "inverse-surface": "#2d3133", "on-secondary": "#ffffff", "on-secondary-container": "#006f66", "background": "#f7f9fb", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "on-tertiary-fixed": "#2f1500", "primary-fixed": "#dde1ff", "tertiary-fixed-dim": "#ffb77d", "primary": "#00288e", "on-tertiary-fixed-variant": "#6e3900", "on-tertiary": "#ffffff", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#6bd8cb", "primary-container": "#1e40af", "surface-container-highest": "#e0e3e5", "surface": "#f7f9fb", "on-tertiary-container": "#ffa85d", "surface-tint": "#3755c3", "on-secondary-fixed": "#00201d", "outline": "#757684", "outline-variant": "#c4c5d5", "secondary": "#006a61", "tertiary-container": "#743d00", "error-container": "#ffdad6", "on-surface-variant": "#444653", "inverse-on-surface": "#eff1f3", "on-primary-container": "#a8b8ff", "tertiary": "#532a00", "primary-fixed-dim": "#b8c4ff", "on-primary-fixed": "#001453" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1.25rem", "margin": "2rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg-mobile": ["Rubik"], "body-lg": ["Rubik"], "body-md": ["Rubik"], "headline-sm": ["Rubik"], "label-sm": ["Rubik"], "label-lg": ["Rubik"], "headline-xl": ["Rubik"], "headline-md": ["Rubik"], "headline-lg": ["Rubik"], "body-sm": ["Rubik"], "label-md": ["Rubik"], "headline-xl-mobile": ["Rubik"] }, fontSize: { "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", fontWeight: "500" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "52px", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "30px", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "42px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }], "headline-xl-mobile": ["30px", { lineHeight: "40px", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Rubik',sans-serif;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="חזרה" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_forward</span></button><img alt="FindIt AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VnVzl7S2JjrTZkbAZUgi4ydl5Ts3WkqxY0zD4wKnbeLCxJNBsQTbfrTa8LSTOqtd45Z16Fr6oIEOnuRwBOtkvv25BoQZfPfz5oXwWjZ313wmzWbnD9i4zsvB2PIFDOW8lwJry4F5hlAMbUJ-iua-h8RcZdiY9riLcOqb4IHJ2i8l6kaIQGgcJATBGM2qli6VGdfp-ogVYY7sK-s-1QJWoToTR_ZOZTwjZb__SIiTXI"/><h1 class="font-headline-sm text-headline-sm text-on-surface">Report Item</h1></div><div class="flex items-center gap-space-xs"><button aria-label="פעולות נוספות" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe-zHqUD07hiNARRWsahTMten0a8W0zNGqAjqR4IYix1T7H69P-LrSmmHC6ZqNGhbNJ2TXq5nTaKXSPiiMa_IybbIi4nCMvuGrkuV63tTokun5jfOoffAWy6nIre1J_d4ZkfdGib_DAxlstVsndX8c85v5_W-A0qs4hhd54-4tH3xUVd0dN3JiwEhQ4LGx94J1x2yAhFWzQUR84AY7o9YV-39F9KeREvpafwrOQVc"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Type Selector Segmented Pill -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container p-1 rounded-full flex relative items-center shadow-sm">
+<button class="flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs bg-primary text-on-primary shadow-md" id="tab-lost" onclick="switchMode('lost')">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<span>איבדתי חפץ</span>
+</button>
+<button class="flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface" id="tab-found" onclick="switchMode('found')">
+<span class="material-symbols-outlined text-[18px]">front_hand</span>
+<span>מצאתי חפץ</span>
+</button>
+</div>
+</section>
+<!-- Interactive AI Prompt & Voice Agent -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-gradient-to-br from-surface-container-lowest via-secondary-container/20 to-primary-fixed/30 rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-secondary">סוכן FindIt AI מקשיב</span>
+<span class="inline-flex w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            תאר במשפט אחד את מה שקרה, והמערכת תמלא עבורך את הטופס מיידית:
+          </p>
+</div>
+</div>
+<!-- Quick Magic Filler Chips / Trigger Box -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-lg p-space-sm shadow-xs flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble_outline</span>
+<button class="text-right truncate font-body-sm text-body-sm text-primary font-medium hover:underline" onclick="autofillWithAI('איבדתי ארנק שחור ליד הספרייה ביום ראשון')">
+              "איבדתי ארנק עור שחור ליד הספרייה ביום ראשון..."
+            </button>
+</div>
+<button class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0 hover:bg-primary-container hover:text-on-primary transition-colors" id="voice-btn" onclick="toggleVoiceSim()">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<button class="w-full bg-secondary-fixed/50 hover:bg-secondary-fixed text-on-secondary-fixed-variant rounded-md py-1.5 px-space-sm flex items-center justify-center gap-space-xs font-label-md text-label-md transition-colors" onclick="autofillWithAI('איבדתי ארנק שחור ליד הספרייה ביום ראשון')">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+<span>לחץ למילוי שדות אוטומטי בעזרת בינה מלאכותית</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Structured Form -->
+<form class="px-margin-mobile pt-space-lg flex flex-col gap-space-lg" id="report-form" onsubmit="event.preventDefault(); triggerSubmitSequence();">
+<!-- 1. Category Visual Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">category</span>
+<span>קטגוריית החפץ</span>
+</span>
+<span class="font-body-sm text-body-sm text-error">* חובה</span>
+</label>
+<div class="grid grid-cols-5 gap-1.5 pt-1" id="category-selector">
+<button class="cat-pill bg-surface-container-lowest hover:bg-surface-container text-on-surface p-2 rounded-xl flex flex-col items-center justify-center gap-1 shadow-xs transition-all ring-0 text-center" onclick="selectCategory(this, 'electronics')" type="button">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight">אלקטרוניקה</span>
+</button>
+<button class="cat-pill bg-surface-container-lowest hover:bg-surface-container text-on-surface p-2 rounded-xl flex flex-col items-center justify-center gap-1 shadow-xs transition-all ring-0 text-center" onclick="selectCategory(this, 'keys')" type="button">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight">מפתחות</span>
+</button>
+<button class="cat-pill bg-surface-container-lowest hover:bg-surface-container text-on-surface p-2 rounded-xl flex flex-col items-center justify-center gap-1 shadow-xs transition-all ring-0 text-center" onclick="selectCategory(this, 'wallets')" type="button">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight">ארנק/כרטיס</span>
+</button>
+<button class="cat-pill bg-surface-container-lowest hover:bg-surface-container text-on-surface p-2 rounded-xl flex flex-col items-center justify-center gap-1 shadow-xs transition-all ring-0 text-center" onclick="selectCategory(this, 'bags')" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">backpack</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight">תיקים</span>
+</button>
+<button class="cat-pill bg-surface-container-lowest hover:bg-surface-container text-on-surface p-2 rounded-xl flex flex-col items-center justify-center gap-1 shadow-xs transition-all ring-0 text-center" onclick="selectCategory(this, 'personal')" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight">אישי/אחר</span>
+</button>
+</div>
+</div>
+<!-- 2. Item Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="item-name">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">label</span>
+<span>שם או סוג החפץ</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ספציפי ככל האפשר</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg py-3 pr-10 pl-3 font-body-md text-body-md shadow-xs focus:outline-none focus:bg-surface-container-low transition-colors" id="item-name" placeholder="למשל: אוזניות סוני WH-1000XM4, מפתחות עם מחזיק ירוק" type="text"/>
+<span class="material-symbols-outlined text-outline text-[20px] absolute right-3 top-3.5 pointer-events-none">edit_note</span>
+</div>
+</div>
+<!-- 3. Color Palette Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">palette</span>
+<span>צבע דומיננטי</span>
+</span>
+<span class="font-label-md text-label-md text-secondary font-medium" id="selected-color-label">טרם נבחר</span>
+</label>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-xs flex items-center justify-between px-space-md">
+<!-- Black -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-neutral-900 shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'שחור', 'bg-neutral-900')" title="שחור" type="button">
+<span class="material-symbols-outlined text-white text-[18px] hidden check-icon">check</span>
+</button>
+<!-- White -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'לבן', 'bg-white')" title="לבן" type="button">
+<span class="material-symbols-outlined text-neutral-800 text-[18px] hidden check-icon">check</span>
+</button>
+<!-- Blue -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-blue-600 shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'כחול', 'bg-blue-600')" title="כחול" type="button">
+<span class="material-symbols-outlined text-white text-[18px] hidden check-icon">check</span>
+</button>
+<!-- Red -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-red-500 shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'אדום', 'bg-red-500')" title="אדום" type="button">
+<span class="material-symbols-outlined text-white text-[18px] hidden check-icon">check</span>
+</button>
+<!-- Silver/Gray -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-slate-400 shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'כסף / אפור', 'bg-slate-400')" title="כסף / אפור" type="button">
+<span class="material-symbols-outlined text-white text-[18px] hidden check-icon">check</span>
+</button>
+<!-- Other/Multicolor -->
+<button class="color-btn relative w-9 h-9 rounded-full bg-gradient-to-tr from-amber-400 via-rose-400 to-indigo-500 shadow-sm flex items-center justify-center transition-transform hover:scale-110" onclick="selectColor(this, 'אחר / שילוב', 'bg-gradient-to-tr from-amber-400 via-rose-400 to-indigo-500')" title="אחר" type="button">
+<span class="material-symbols-outlined text-white text-[18px] hidden check-icon">check</span>
+</button>
+</div>
+</div>
+<!-- 4. Description & Identifiers -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="item-desc">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+<span>תיאור מפורט ומאפיינים ייחודיים</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">סימנים, שריטות, מותג</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg p-space-sm font-body-md text-body-md shadow-xs focus:outline-none focus:bg-surface-container-low transition-colors resize-none" id="item-desc" placeholder="פרט סימנים מזהים: למשל מדבקה מסוימת על הגב, שריטה קלה, סוג התכולה (ללא חשיפת פרטי זיהוי רגישים)..." rows="3"></textarea>
+</div>
+<!-- 5. Location -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">pin_drop</span>
+<span id="location-label-text">מיקום משוער שבו אבד</span>
+</span>
+</label>
+<div class="grid grid-cols-1 gap-2">
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface rounded-lg py-3 pr-10 pl-3 font-body-md text-body-md shadow-xs appearance-none focus:outline-none focus:bg-surface-container-low" id="campus-building">
+<option value="">בחר מבנה / מתחם מרכזי בקמפוס...</option>
+<option value="ספרייה מרכזית">הספרייה המרכזית (סוראסקי/שלום)</option>
+<option value="בניין הנדסה">בניין הנדסה / כיתות מחשבים</option>
+<option value="מתחם מדעי הרוח">בניין גילמן / מדעי הרוח</option>
+<option value="קפיטריה ראשית">הקפיטריה הראשית והרחבה</option>
+<option value="מעונות סטודנטים">מעונות הסטודנטים</option>
+<option value="תחנת אוטובוס/שער">שער ראשי / תחנות אוטובוס</option>
+<option value="אחר">אזור אחר בקמפוס</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[20px] absolute right-3 top-3.5 pointer-events-none">domain</span>
+<span class="material-symbols-outlined text-outline text-[20px] absolute left-3 top-3.5 pointer-events-none">arrow_drop_down</span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg py-3 pr-10 pl-3 font-body-md text-body-md shadow-xs focus:outline-none focus:bg-surface-container-low transition-colors" id="location-detail" placeholder="מיקום ספציפי (למשל: קומה 2, ליד עמדת ההדפסה)" type="text"/>
+<span class="material-symbols-outlined text-outline text-[20px] absolute right-3 top-3.5 pointer-events-none">near_me</span>
+</div>
+</div>
+</div>
+<!-- 6. Date & Time -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="item-date">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span>תאריך ושעה מוערכת</span>
+</span>
+</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg py-2.5 pr-9 pl-2 font-body-md text-body-md shadow-xs focus:outline-none" id="item-date" type="date"/>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-2.5 top-3 pointer-events-none">event</span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg py-2.5 pr-9 pl-2 font-body-md text-body-md shadow-xs focus:outline-none" id="item-time" type="time" value="14:00"/>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-2.5 top-3 pointer-events-none">schedule</span>
+</div>
+</div>
+</div>
+<!-- 7. Photo Upload Area (Optional) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">add_a_photo</span>
+<span>העלאת תמונה (אופציונלי)</span>
+</label>
+<span class="font-body-sm text-body-sm text-secondary">מגדיל את סיכויי ההתאמה ב-84%</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-colors shadow-xs" id="upload-zone" onclick="simulateImageSelect()">
+<div class="flex flex-col items-center" id="upload-idle">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center mb-space-xs shadow-xs">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">לחץ לצילום או בחירת תמונה</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">JPG, PNG עד 10MB</span>
+</div>
+<div class="hidden flex-row items-center gap-space-md w-full" id="upload-preview">
+<img class="w-16 h-16 rounded-lg object-cover shadow-sm shrink-0" data-alt="A clean modern photo of a student personal accessory like black headphones on a wooden university library desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdwE1t7WdjHm55ElgeroA2jLw6d1jIPSldvLolvCipFx1EhuoEfNPmB7PbojuOYMt8PxuDgokOef2eUC07Odi6h8VvvaswtivQ6M6Hgq4-hOq4E3VBv-dUm7R5C1ZCjMFGse2UN8zr_ZvoQpGTwnefPS9Fq7mEZUPoH5yINMsihvH7JGx8HS5N2GyYZ6j1wqQZYdLNb2D46kHCpDoIHlgu4cj0YAm1pqETLoJXMwQ"/>
+<div class="flex-1 text-right min-w-0">
+<div class="font-label-md text-label-md text-on-surface truncate">Sony_WH1000XM4.jpg</div>
+<div class="font-body-sm text-body-sm text-secondary">התמונה נותחה בהצלחה ע״י AI ✓</div>
+</div>
+<button class="p-1 rounded-full text-outline hover:text-error" onclick="event.stopPropagation(); removePhoto();" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & Privacy Guard Badge -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm shadow-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">הגנה מוחלטת על פרטיות</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          פרטי הקשר שלך לעולם אינם נחשפים בפומבי. אימות הבעלות מול המוצא יתבצע באופן מאובטח באמצעות שאלות זיהוי ואישור ביטחון הקמפוס.
+        </p>
+</div>
+</div>
+<!-- Submit Primary Button -->
+<div class="pt-space-xs">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg py-3.5 px-space-lg rounded-xl shadow-md flex items-center justify-center gap-space-sm transition-all active:scale-[0.99]" id="submit-btn" type="submit">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+<span>פרסם דיווח ובדוק התאמות AI מיידיות 🚀</span>
+</button>
+</div>
+</form>
+<!-- Community Activity Preview -->
+<section class="px-margin-mobile pt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface">פריטים שנמצאו לאחרונה בקמפוס</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">38 פריטים ממתינים</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-xs flex flex-col gap-1.5">
+<img class="w-full h-24 rounded-lg object-cover" data-alt="Black wireless headphones sitting in a lost and found campus security bin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpOEnbSKx59wBpVtDjdEl3xCMTgmaz3__kW-PFAn_Z8AJ-gqZ9fFRHb7BVRt4wD5NOHMVzN9aJFW_UXhmmania-QPDEdqZmPq--WRF8vi0p7WfRlA6w5va21rMX3r_-dGDCdE299sFM5YeU0bxgvWXkDTF1_uN3Mx8HA_SNByg4MjjSPAC0KmtQg6baucGjmqsqYtIiwKsYegT4edKKJhYY35oZDjJnRhL58FMgp0"/>
+<div class="font-label-md text-label-md text-on-surface truncate">אוזניות שחורות מעל האוזן</div>
+<div class="flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm">ספרייה מרכזית</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-xs flex flex-col gap-1.5">
+<img class="w-full h-24 rounded-lg object-cover" data-alt="Leather wallet with student ID card peeking out on a library reading table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBavd6j9KVD0zJCcYggmixugrWUuvCHRYxWVx8BtNqnWDO4TtwAm2NgfxTT6yDKg8xuHJMH-dwJxlZQn05ddLpNDlopOjgQrGCxsYMRynfqLHkmZOHAbrf3Ee2kKVsGPey-vfWOa2W3nXETAIfymZHq4j7vIqSRGrGAcTF3tIIFR-9sjPU0iKR_L202KgPuA3UC_u0pQTTTfTu2iZsaXAgn6aJHC_ZD05F176dNhmM"/>
+<div class="font-label-md text-label-md text-on-surface truncate">ארנק עור כהה עם תג</div>
+<div class="flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm">בניין הנדסה</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Match Drawer / AI Simulation Modal (Overlay) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4" id="ai-modal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-2xl sm:rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md animate-in slide-in-from-bottom duration-300">
+<!-- Progress / Pulse state -->
+<div class="flex flex-col items-center text-center py-space-md" id="modal-scanning-state">
+<div class="relative w-16 h-16 flex items-center justify-center mb-space-sm">
+<span class="absolute inset-0 rounded-full bg-primary-fixed animate-ping opacity-60"></span>
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px] animate-spin">sync</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">מנוע ההתאמות פועל...</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          נבדקות התאמות מול <strong class="text-primary font-semibold">38 דיווחי מציאה קיימים</strong> בקמפוס לפי זיהוי תמונה, מיקום וזמנים.
+        </p>
+<!-- Dynamic scan indicator -->
+<div class="w-full bg-surface-container rounded-full h-2.5 mt-space-md overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-700 w-1/4" id="progress-bar"></div>
+</div>
+</div>
+<!-- Match Found Result State (Revealed via JS) -->
+<div class="hidden flex-col gap-space-md" id="modal-success-state">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">נמצאה התאמה בסבירות גבוהה!</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm">96% התאמה</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-sm flex gap-space-sm items-center">
+<img class="w-16 h-16 rounded-lg object-cover shrink-0" data-alt="Black premium leather wallet found at university library counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUhFsobpJ5drqER-W3h6zNPIBEHbRf1oY9ripx1u44t-XBH9pQfsiwmPKc0FpHXTgjteh2iQQwxGlLu0CUE-0wDGOD1AcYj-i3upujVlxqISVsHrWLb7bZPBS5bwmJVnP9tp9KGFmtsrYIUF0dzPVvRzKvCjbJZ-_uBPpUlsjhlCOWDW2SStOwf42-EM0QC3WmXcj057iRw6LP-VjJM7WsLkH7YrxHFERB9OFwoOw"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">ארנק עור שחור גברי</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">נמסר לביטחון הספרייה ע״י יואב מ.</p>
+<span class="font-label-sm text-label-sm text-secondary">נמצא לפני 4 שעות במפלס 2</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          סוכן ה-AI העביר את הדיווח לאימות מאובטח. תוכל לפתוח שיחה מול נציג הביטחון של הקמפוס לשחרור הפריט.
+        </p>
+<div class="flex flex-col gap-2 pt-space-xs">
+<button class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary py-3 rounded-xl font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-space-xs" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>צפה בהתאמה והתחל תהליך שחרור</span>
+</button>
+<button class="w-full bg-surface-container-high text-on-surface-variant py-2.5 rounded-xl font-label-md text-label-md hover:bg-surface-container-highest" onclick="closeModal()">
+            שמור דיווח וחזור לדף הבית
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentMode = 'lost';
+  let hasImage = false;
+
+  function switchMode(mode) {
+    currentMode = mode;
+    const tabLost = document.getElementById('tab-lost');
+    const tabFound = document.getElementById('tab-found');
+    const locLabel = document.getElementById('location-label-text');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (mode === 'lost') {
+      tabLost.className = "flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs bg-primary text-on-primary shadow-md";
+      tabFound.className = "flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface";
+      locLabel.innerText = "מיקום משוער שבו אבד";
+      submitBtn.innerHTML = `<span class="material-symbols-outlined text-[22px]">rocket_launch</span><span>פרסם דיווח ובדוק התאמות AI מיידיות 🚀</span>`;
+    } else {
+      tabFound.className = "flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs bg-secondary text-on-secondary shadow-md";
+      tabLost.className = "flex-1 py-2.5 px-space-md rounded-full font-label-lg text-label-lg transition-all duration-300 flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface";
+      locLabel.innerText = "היכן מצאת את החפץ?";
+      submitBtn.innerHTML = `<span class="material-symbols-outlined text-[22px]">thumb_up</span><span>פרסם דיווח מציאה ועזור לחבר להשיבו 🤝</span>`;
+    }
+  }
+
+  function selectCategory(el, catKey) {
+    document.querySelectorAll('.cat-pill').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+    el.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    el.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+  }
+
+  function selectColor(el, name, bgClass) {
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.querySelector('.check-icon').classList.add('hidden');
+      btn.classList.remove('ring-4', 'ring-primary-fixed');
+    });
+    el.querySelector('.check-icon').classList.remove('hidden');
+    el.classList.add('ring-4', 'ring-primary-fixed');
+    document.getElementById('selected-color-label').innerText = name;
+  }
+
+  function autofillWithAI(text) {
+    const inputName = document.getElementById('item-name');
+    const inputDesc = document.getElementById('item-desc');
+    const building = document.getElementById('campus-building');
+    const locDetail = document.getElementById('location-detail');
+
+    // Simulate smart parsing
+    inputName.value = "ארנק עור לגבר";
+    inputDesc.value = "ארנק שחור מתקפל, מכיל כרטיס סטודנט ורב-קו, תפרים כפולים";
+    building.value = "ספרייה מרכזית";
+    locDetail.value = "בסמוך לשולחנות הקריאה בקומת הכניסה";
+
+    // Set Category to Wallet (3rd pill)
+    const pills = document.querySelectorAll('.cat-pill');
+    if (pills[2]) selectCategory(pills[2], 'wallets');
+
+    // Set Color to Black (1st color)
+    const colorBtns = document.querySelectorAll('.color-btn');
+    if (colorBtns[0]) selectColor(colorBtns[0], 'שחור', 'bg-neutral-900');
+
+    // Quick subtle highlight
+    inputName.classList.add('bg-secondary-fixed/30');
+    setTimeout(() => inputName.classList.remove('bg-secondary-fixed/30'), 900);
+  }
+
+  function toggleVoiceSim() {
+    const voiceBtn = document.getElementById('voice-btn');
+    voiceBtn.classList.toggle('animate-pulse');
+    voiceBtn.classList.toggle('bg-error');
+    voiceBtn.classList.toggle('text-on-error');
+
+    setTimeout(() => {
+      voiceBtn.classList.remove('animate-pulse', 'bg-error', 'text-on-error');
+      autofillWithAI("הקלטה הושלמה");
+    }, 1500);
+  }
+
+  function simulateImageSelect() {
+    document.getElementById('upload-idle').classList.add('hidden');
+    document.getElementById('upload-preview').classList.remove('hidden');
+    document.getElementById('upload-preview').classList.add('flex');
+    hasImage = true;
+  }
+
+  function removePhoto() {
+    document.getElementById('upload-preview').classList.add('hidden');
+    document.getElementById('upload-preview').classList.remove('flex');
+    document.getElementById('upload-idle').classList.remove('hidden');
+    hasImage = false;
+  }
+
+  function triggerSubmitSequence() {
+    const modal = document.getElementById('ai-modal');
+    const scanning = document.getElementById('modal-scanning-state');
+    const success = document.getElementById('modal-success-state');
+    const bar = document.getElementById('progress-bar');
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    scanning.classList.remove('hidden');
+    success.classList.add('hidden');
+    bar.style.width = '20%';
+
+    setTimeout(() => { bar.style.width = '65%'; }, 600);
+    setTimeout(() => { bar.style.width = '100%'; }, 1200);
+
+    setTimeout(() => {
+      scanning.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.classList.add('flex');
+    }, 1600);
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('ai-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Pre-select defaults
+  window.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('item-date');
+    if (dateInput) dateInput.value = today;
+  });
+</script></main></body></html>

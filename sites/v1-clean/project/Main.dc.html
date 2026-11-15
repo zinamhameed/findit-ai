@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>FindIt AI — אבדות ומציאות בקמפוס</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f9fb}
+a{color:#00288e}a:hover{color:#1e40af}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+</style>
+</helmet>
+<div dir="rtl" style="font-family: 'Rubik', system-ui, sans-serif; color: #191c1e; background: #f7f9fb; line-height: 1.6; min-width: 0">
+
+<!-- NAV -->
+<header style="background: rgba(247,249,251,0.92); border-bottom: 1px solid #e2e8f0; padding: 0 24px">
+<div style="max-width: 1200px; margin: 0 auto; min-height: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; box-sizing: border-box">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #00288e">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #00288e; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path><path d="M8.5 11l2 2 3.5-4"></path></svg>
+</span>
+<span style="font-size: 22px; font-weight: 700; letter-spacing: -0.3px">FindIt AI</span>
+</a>
+<nav aria-label="ניווט ראשי" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="#how" style="color: #444653; text-decoration: none">איך זה עובד</a>
+<a href="#features" style="color: #444653; text-decoration: none">יכולות</a>
+<a href="#privacy" style="color: #444653; text-decoration: none">פרטיות</a>
+<a href="#campus" style="color: #444653; text-decoration: none">למוסדות</a>
+<a href="#faq" style="color: #444653; text-decoration: none">שאלות נפוצות</a>
+</nav>
+<a href="#cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 8px; background: #00288e; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px">התחילו עכשיו</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="padding: 80px 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: #86f2e4; color: #00403a; font-size: 14px; font-weight: 600">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>
+מערכת אבדות ומציאות חכמה לקמפוס
+</span>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.2; font-weight: 800; color: #00288e; letter-spacing: -0.5px">איבדתם משהו בקמפוס?<br>אנחנו נחבר אתכם אליו.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.7; color: #444653; max-width: 560px">FindIt AI מחברת בין מי שאיבד למי שמצא. מתארים את החפץ במשפט אחד, מצלמים אם אפשר, והמערכת מחפשת התאמות לפי תמונה, מיקום וזמן, ומלווה עד מסירה מאובטחת.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a href="#start" onClick="{{ chooseLost }}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 10px; background: #1e40af; color: #ffffff; text-decoration: none; font-size: 17px; font-weight: 600">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+איבדתי חפץ
+</a>
+<a href="#start" onClick="{{ chooseFound }}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 10px; background: #006a61; color: #ffffff; text-decoration: none; font-size: 17px; font-weight: 600">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"></path></svg>
+מצאתי חפץ
+</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; padding-top: 8px; font-size: 15px; color: #444653">
+<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006a61" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>חינם לסטודנטים</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006a61" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>פרטי קשר לא נחשפים</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006a61" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>מסירה דרך ביטחון הקמפוס</span>
+</div>
+</div>
+
+<!-- Report flow card: lost/found → describe + photo -->
+<div id="start" style="flex: 1 1 380px; display: flex; justify-content: center; min-width: 0">
+<div style="width: 440px; max-width: 100%; border-radius: 24px; background: #ffffff; border: 1px solid #e2e8f0; padding: 32px; box-sizing: border-box; box-shadow: 0 20px 32px -8px rgba(15,23,42,0.12); display: flex; flex-direction: column; gap: 20px">
+
+<sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 600; color: #006a61">שלב 1 מתוך 2</span>
+<h2 style="margin: 0; font-size: 28px; line-height: 1.3; font-weight: 700">מצאת או איבדת?</h2>
+<p style="margin: 0; font-size: 16px; color: #444653">בחרו מה קרה, ונמשיך משם.</p>
+</div>
+<button type="button" onClick="{{ chooseLost }}" style="display: flex; align-items: center; gap: 16px; width: 100%; min-height: 88px; padding: 18px 20px; border-radius: 16px; border: 1.5px solid #c4c5d5; background: #ffffff; cursor: pointer; text-align: right; font-family: inherit; color: #191c1e">
+<span style="width: 52px; height: 52px; border-radius: 9999px; background: #dde1ff; color: #00288e; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 700">איבדתי חפץ</span><span style="font-size: 15px; color: #444653">נחפש עבורכם התאמות בקמפוס</span></span>
+</button>
+<button type="button" onClick="{{ chooseFound }}" style="display: flex; align-items: center; gap: 16px; width: 100%; min-height: 88px; padding: 18px 20px; border-radius: 16px; border: 1.5px solid #c4c5d5; background: #ffffff; cursor: pointer; text-align: right; font-family: inherit; color: #191c1e">
+<span style="width: 52px; height: 52px; border-radius: 9999px; background: #89f5e7; color: #005049; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 700">מצאתי חפץ</span><span style="font-size: 15px; color: #444653">עזרו להחזיר אותו לבעלים</span></span>
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 14px; font-weight: 600; color: #006a61">שלב 2 מתוך 2</span>
+<button type="button" onClick="{{ back }}" style="min-height: 44px; padding: 0 12px; border: none; background: transparent; color: #00288e; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">חזרה</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="align-self: flex-start; padding: 4px 12px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: {{ chipBg }}; color: {{ chipFg }}">{{ modeLabel }}</span>
+<h2 style="margin: 0; font-size: 26px; line-height: 1.3; font-weight: 700">{{ step2Title }}</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="item-desc" style="font-size: 16px; font-weight: 600">תיאור החפץ</label>
+<textarea id="item-desc" rows="4" value="{{ desc }}" onChange="{{ onDesc }}" placeholder="{{ descPlaceholder }}" style="width: 100%; box-sizing: border-box; border-radius: 10px; border: 1px solid #cbd5e1; padding: 12px 14px; font-family: inherit; font-size: 16px; line-height: 1.6; color: #191c1e; background: #ffffff; resize: vertical"></textarea>
+<span style="font-size: 13px; color: #444653">כתבו מה זה, צבע, מותג, איפה ומתי. אל תציינו סימני זיהוי סודיים.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 16px; font-weight: 600">תמונה מתארת <span style="font-weight: 400; color: #444653">(לא חובה)</span></span>
+<sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
+<label for="item-photo" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 132px; border-radius: 14px; border: 1.5px dashed #757684; background: #f7f9fb; cursor: pointer; text-align: center; padding: 16px; box-sizing: border-box">
+<span style="width: 48px; height: 48px; border-radius: 9999px; background: #dde1ff; color: #00288e; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span>
+<span style="font-size: 15px; font-weight: 600; color: #00288e">צלמו או בחרו תמונה</span>
+<span style="font-size: 13px; color: #444653">JPG או PNG</span>
+</label>
+</sc-if>
+<input id="item-photo" type="file" accept="image/*" onChange="{{ onFile }}" style="position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden">
+<sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 14px; border-radius: 14px; border: 1px solid #e2e8f0; background: #f7f9fb; padding: 12px">
+<img src="{{ photoUrl }}" alt="תמונת החפץ שנבחרה" style="width: 72px; height: 72px; border-radius: 10px; object-fit: cover; flex-shrink: 0">
+<span style="flex: 1 1 auto; min-width: 0; font-size: 14px; color: #191c1e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ photoName }}</span>
+<button type="button" onClick="{{ removePhoto }}" style="min-height: 44px; padding: 0 12px; border: none; background: transparent; color: #ba1a1a; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">הסרה</button>
+</div>
+</sc-if>
+</div>
+<sc-if value="{{ showHint }}" hint-placeholder-val="{{ false }}">
+<span role="alert" style="font-size: 14px; color: #ba1a1a">כתבו תיאור קצר של החפץ כדי להמשיך.</span>
+</sc-if>
+<button type="button" onClick="{{ submit }}" style="min-height: 52px; border: none; border-radius: 12px; background: {{ submitBg }}; color: #ffffff; font-family: inherit; font-size: 17px; font-weight: 600; cursor: pointer">{{ submitLabel }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; padding: 16px 0">
+<span style="width: 64px; height: 64px; border-radius: 9999px; background: #d1fae5; color: #047857; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>
+<h2 style="margin: 0; font-size: 26px; font-weight: 700">הדיווח התקבל</h2>
+<p style="margin: 0; font-size: 16px; color: #444653">{{ doneText }}</p>
+<div style="width: 100%; display: flex; gap: 12px; align-items: center; border-radius: 14px; background: #f7f9fb; border: 1px solid #e2e8f0; padding: 12px; text-align: right; box-sizing: border-box">
+<sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+<img src="{{ photoUrl }}" alt="תמונת החפץ" style="width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex-shrink: 0">
+</sc-if>
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 13px; font-weight: 600; color: {{ chipFg }}">{{ modeLabel }}</span>
+<span style="font-size: 15px; color: #191c1e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ desc }}</span>
+</div>
+</div>
+<button type="button" onClick="{{ reset }}" style="min-height: 48px; padding: 0 24px; border-radius: 10px; border: 1.5px solid #00288e; background: #ffffff; color: #00288e; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">דיווח נוסף</button>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="padding: 96px 24px; background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+<span style="font-size: 15px; font-weight: 600; color: #006a61">איך זה עובד</span>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.3; font-weight: 700">משלושה צעדים, החפץ חוזר הביתה</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div style="border-radius: 16px; background: #f7f9fb; border: 1px solid #e2e8f0; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<span style="width: 48px; height: 48px; border-radius: 9999px; background: #00288e; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">1</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">מדווחים במשפט אחד</h3>
+<p style="margin: 0; font-size: 16px; color: #444653">כותבים או אומרים בקול מה קרה, למשל "איבדתי ארנק שחור ליד הספרייה", וה-AI ממלא את טופס הדיווח: קטגוריה, צבע, מיקום ושעה.</p>
+</div>
+<div style="border-radius: 16px; background: #f7f9fb; border: 1px solid #e2e8f0; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<span style="width: 48px; height: 48px; border-radius: 9999px; background: #006a61; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">2</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">ה-AI מחפש התאמות</h3>
+<p style="margin: 0; font-size: 16px; color: #444653">מנוע ההתאמות משווה כל דיווח לדיווחי המציאה בקמפוס לפי תמונה, קטגוריה, צבע, מיקום ומועד, ומציג התאמות אפשריות עם רמת ביטחון.</p>
+</div>
+<div style="border-radius: 16px; background: #f7f9fb; border: 1px solid #e2e8f0; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<span style="width: 48px; height: 48px; border-radius: 9999px; background: #1e40af; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">3</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">מאמתים ואוספים בבטחה</h3>
+<p style="margin: 0; font-size: 16px; color: #444653">מוסרים סימן זיהוי שלא מופיע בדיווח הציבורי, הוא נבדק על ידי גורם מוסמך, ומתאמים איסוף בנקודת האבידות של הקמפוס.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="padding: 96px 24px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+<span style="font-size: 15px; font-weight: 600; color: #006a61">יכולות</span>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.3; font-weight: 700">כל מה שצריך כדי למצוא, בלי הלחץ</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #dde1ff; color: #00288e; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">התאמות חכמות</h3><p style="margin: 0; font-size: 15px; color: #444653">פירוט ההתאמה לפי קטגוריה, צבע, מיקום ומועד, כדי שתבינו למה המערכת הציעה אותה.</p></div>
+</div>
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #89f5e7; color: #005049; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">דיווח קולי וטקסטואלי</h3><p style="margin: 0; font-size: 15px; color: #444653">מספרים מה קרה בשפה חופשית, והטופס מתמלא אוטומטית. אפשר לתקן כל שדה לפני הפרסום.</p></div>
+</div>
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ffdcc3; color: #6e3900; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">זיהוי תמונה</h3><p style="margin: 0; font-size: 15px; color: #444653">צילום של החפץ מאפשר למנוע להשוות מראה, צבע ופרטים, ומשפר את איכות ההתאמות.</p></div>
+</div>
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #dde1ff; color: #00288e; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10 21a2 2 0 0 0 4 0"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">התראות בזמן אמת</h3><p style="margin: 0; font-size: 15px; color: #444653">ברגע שמדווח פריט שעשוי להתאים, תקבלו התראה ותוכלו לבדוק אותו מיד.</p></div>
+</div>
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #89f5e7; color: #005049; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"></path><circle cx="18" cy="16" r="3"></circle></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">מעקב אחרי הדיווחים</h3><p style="margin: 0; font-size: 15px; color: #444653">כל הדיווחים במקום אחד, עם סטטוס ברור: אבד, התאמה אפשרית, בתהליך אימות, הוחזר.</p></div>
+</div>
+<div style="border-radius: 16px; background: #ffffff; border: 1px solid #e2e8f0; padding: 28px; display: flex; gap: 18px; align-items: flex-start">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ffdcc3; color: #6e3900; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">מותאם למפת הקמפוס</h3><p style="margin: 0; font-size: 15px; color: #444653">בחירת מבנה ומיקום מדויק מתוך רשימת המתחמים של המוסד, כדי שההתאמה תהיה מדויקת יותר.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; border-radius: 24px; background: #00288e; color: #ffffff; padding: 56px 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 15px; font-weight: 600; color: #b8c4ff">פרטיות ואבטחה</span>
+<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700">החפץ חוזר רק לבעלים האמיתיים</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #dde1ff">פרטי הקשר שלכם לא מוצגים לאף אחד. הדיווחים הציבוריים לא כוללים פרטים מזהים רגישים, ואימות הבעלות נעשה באמצעות סימני זיהוי שרק הבעלים מכירים, מול גורם מוסמך בקמפוס.</p>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 18px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86f2e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path></svg><span style="font-size: 16px">פרטי קשר מוסתרים תמיד</span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 18px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86f2e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span style="font-size: 16px">סימני זיהוי נשמרים מוצפנים ונחשפים רק למאמת</span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 18px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86f2e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px"><path d="M3 21h18M5 21V10l7-5 7 5v11"></path><path d="M10 21v-6h4v6"></path></svg><span style="font-size: 16px">מסירה בנקודת האבידות הרשמית, עם תעודת סטודנט</span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 18px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86f2e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4M12 16h.01"></path></svg><span style="font-size: 16px">ה-AI מציע התאמה אפשרית בלבד; ההחלטה הסופית אנושית</span></div>
+</div>
+</div>
+</section>
+
+<!-- FOR INSTITUTIONS -->
+<section id="campus" style="padding: 96px 24px; background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 15px; font-weight: 600; color: #006a61">למוסדות אקדמיים</span>
+<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700">פחות פניות למוקד, יותר חפצים שחוזרים</h2>
+<p style="margin: 0; font-size: 18px; color: #444653">FindIt AI מחליפה את מחסן האבידות הידני בתהליך דיגיטלי שקוף: הסטודנטים מדווחים בעצמם, צוות הביטחון מאמת ומוסר.</p>
+<a href="#cta" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; border: 1.5px solid #00288e; color: #00288e; text-decoration: none; font-weight: 600; font-size: 16px">תיאום הדגמה למוסד</a>
+</div>
+<div style="flex: 999 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div style="border-radius: 14px; background: #f2f4f6; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">לוח בקרה לצוות הביטחון</h3><p style="margin: 0; font-size: 15px; color: #444653">כל הפריטים שהופקדו, בקשות האימות והמסירות שתואמו, במסך אחד.</p></div>
+<div style="border-radius: 14px; background: #f2f4f6; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">התאמה למבנה הקמפוס</h3><p style="margin: 0; font-size: 15px; color: #444653">רשימת מבנים, נקודות איסוף ושעות פעילות לפי המוסד שלכם.</p></div>
+<div style="border-radius: 14px; background: #f2f4f6; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">מדיניות שמירה</h3><p style="margin: 0; font-size: 15px; color: #444653">הגדרת פרק הזמן שבו פריט נשמר לפני העברה למחסן המרכזי.</p></div>
+<div style="border-radius: 14px; background: #f2f4f6; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">הודעות מערכת</h3><p style="margin: 0; font-size: 15px; color: #444653">עדכונים רשמיים מהקמפוס ישירות לאפליקציה של הסטודנטים.</p></div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding: 96px 24px">
+<div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700; text-align: center">שאלות נפוצות</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details style="border-radius: 14px; background: #ffffff; border: 1px solid #e2e8f0; padding: 20px 24px"><summary style="font-size: 18px; font-weight: 600; min-height: 28px">כמה זה עולה?</summary><p style="margin: 12px 0 0; font-size: 16px; color: #444653">השימוש לסטודנטים ולסגל חינמי. למוסדות: [פרטי התמחור שלכם].</p></details>
+<details style="border-radius: 14px; background: #ffffff; border: 1px solid #e2e8f0; padding: 20px 24px"><summary style="font-size: 18px; font-weight: 600; min-height: 28px">מה קורה אחרי שה-AI מוצא התאמה?</summary><p style="margin: 12px 0 0; font-size: 16px; color: #444653">אתם רואים השוואה בין הדיווחים, מוסרים סימן זיהוי סודי, ואחרי שהוא נבדק מתאמים איסוף בנקודת האבידות.</p></details>
+<details style="border-radius: 14px; background: #ffffff; border: 1px solid #e2e8f0; padding: 20px 24px"><summary style="font-size: 18px; font-weight: 600; min-height: 28px">מישהו יכול לראות את הטלפון או המייל שלי?</summary><p style="margin: 12px 0 0; font-size: 16px; color: #444653">לא. פרטי הקשר לא מוצגים בדיווחים, וכל התקשורת עוברת דרך המערכת וצוות הקמפוס.</p></details>
+<details style="border-radius: 14px; background: #ffffff; border: 1px solid #e2e8f0; padding: 20px 24px"><summary style="font-size: 18px; font-weight: 600; min-height: 28px">מצאתי חפץ. מה עושים איתו?</summary><p style="margin: 12px 0 0; font-size: 16px; color: #444653">מדווחים "מצאתי חפץ" באפליקציה, מצלמים אם אפשר, ומפקידים אותו בעמדת הביטחון הקרובה.</p></details>
+<details style="border-radius: 14px; background: #ffffff; border: 1px solid #e2e8f0; padding: 20px 24px"><summary style="font-size: 18px; font-weight: 600; min-height: 28px">באילו קמפוסים FindIt AI פועלת?</summary><p style="margin: 12px 0 0; font-size: 16px; color: #444653">[רשימת המוסדות שלכם]</p></details>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; border-radius: 24px; background: #86f2e4; padding: 56px 40px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700; color: #00201d">מוכנים להחזיר דברים למקום?</h2>
+<p style="margin: 0; font-size: 18px; color: #005049; max-width: 560px">מצטרפים עם חשבון הסטודנט ומדווחים תוך פחות מדקה.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+<a href="#top" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 10px; background: #00288e; color: #ffffff; text-decoration: none; font-size: 17px; font-weight: 600">פתיחת האפליקציה</a>
+<a href="#campus" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 10px; background: #ffffff; color: #00288e; text-decoration: none; font-size: 17px; font-weight: 600">למוסדות</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #191c1e; color: #e0e3e5; padding: 48px 24px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 360px">
+<span style="font-size: 20px; font-weight: 700; color: #ffffff">FindIt AI</span>
+<span style="font-size: 15px; color: #c4c5d5">מערכת אבדות ומציאות חכמה לקמפוסים.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px">
+<a href="#how" style="color: #e0e3e5">איך זה עובד</a>
+<a href="#privacy" style="color: #e0e3e5">פרטיות</a>
+<a href="#faq" style="color: #e0e3e5">שאלות נפוצות</a>
+<span style="color: #c4c5d5">יצירת קשר: [האימייל שלכם]</span>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid #444653; font-size: 13px; color: #c4c5d5">© 2026 FindIt AI</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { mode: null, desc: '', photoUrl: null, photoName: '', done: false, tried: false };
+  }
+  componentWillUnmount() {
+    if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+  }
+  renderVals() {
+    const s = this.state;
+    const lost = s.mode === 'lost';
+    const hasText = s.desc.trim().length > 0;
+    return {
+      step1: !s.mode,
+      step2: !!s.mode && !s.done,
+      step3: !!s.mode && s.done,
+      modeLabel: lost ? 'איבדתי חפץ' : 'מצאתי חפץ',
+      chipBg: lost ? '#dde1ff' : '#89f5e7',
+      chipFg: lost ? '#00288e' : '#005049',
+      step2Title: lost ? 'מה איבדתם?' : 'מה מצאתם?',
+      descPlaceholder: lost
+        ? 'למשל: אוזניות שחורות מעל האוזן, עם מדבקה על הקשת. נשכחו בספרייה, קומה 2, אתמול בצהריים.'
+        : 'למשל: מפתחות עם מחזיק כחול, נמצאו על ספסל ליד הקפיטריה הבוקר.',
+      submitLabel: lost ? 'פרסום דיווח וחיפוש התאמות' : 'פרסום דיווח מציאה',
+      submitBg: hasText ? (lost ? '#00288e' : '#006a61') : '#757684',
+      doneText: lost
+        ? 'נחפש התאמות בין דיווחי המציאה בקמפוס ונעדכן אתכם כשנמצא משהו מתאים.'
+        : 'תודה! הפקידו את החפץ בעמדת הביטחון הקרובה, ונעדכן כשהבעלים יאתר אותו.',
+      desc: s.desc,
+      showHint: s.tried && !hasText,
+      hasPhoto: !!s.photoUrl,
+      noPhoto: !s.photoUrl,
+      photoUrl: s.photoUrl || '',
+      photoName: s.photoName,
+      chooseLost: () => this.setState({ mode: 'lost', done: false }),
+      chooseFound: () => this.setState({ mode: 'found', done: false }),
+      back: () => this.setState({ mode: null, tried: false }),
+      onDesc: (e) => this.setState({ desc: e.target.value }),
+      onFile: (e) => {
+        const f = e.target.files && e.target.files[0];
+        if (!f) return;
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ photoUrl: URL.createObjectURL(f), photoName: f.name });
+        e.target.value = '';
+      },
+      removePhoto: () => {
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ photoUrl: null, photoName: '' });
+      },
+      submit: () => {
+        if (!this.state.desc.trim()) { this.setState({ tried: true }); return; }
+        this.setState({ done: true, tried: false });
+      },
+      reset: () => {
+        if (this.state.photoUrl) URL.revokeObjectURL(this.state.photoUrl);
+        this.setState({ mode: null, desc: '', photoUrl: null, photoName: '', done: false, tried: false });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
