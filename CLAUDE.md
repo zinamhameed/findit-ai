@@ -92,7 +92,7 @@ The prompts are written in English, and all site copy stays in Hebrew. When a si
 
 - `agents/history-checker.md`: a read-only subagent that answers "what changed / when / which commit".
   - It uses `git log`, `-S`, `blame` and `diff`, and reports in Hebrew.
-  - It needs a git repo. None exists yet.
+  - It reads the history of this repository.
 - `agents/items-checker.md`: a read-only subagent that audits lost/found items in three ways:
   1. **Privacy:** names, contacts or secret marks that leaked into public content.
   2. **Report quality:** missing fields, vague descriptions, inconsistencies.
@@ -105,10 +105,9 @@ The prompts are written in English, and all site copy stays in Hebrew. When a si
   - Never commit or paste the key.
   - The key that was pasted in chat should be rotated.
 
-**Git:** the project is not a repository yet. Recommended steps:
-1. Create a permanent project folder.
-2. Copy all files into it.
-3. Run `git init`, then commit a baseline so `history-checker` has something to read.
+**Git:** this folder is a git repository (`main`).
+- Commit after every meaningful change.
+- No remote is set yet. To publish, add a GitHub remote and push.
 
 ## Conventions (all parts)
 
